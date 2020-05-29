@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Vending
 {
@@ -20,57 +19,55 @@ namespace Vending
         // Add a new product to the Vending Machine (For stocking machine)
         public void AddProduct(Product newProduct)
         {
-            _products.Add(newProduct);
+            throw new NotImplementedException();
         }
 
         // Remove a product from the Vending Machine (for purchasing a product)
         public void RemoveProduct(Product productToRemove)
         {
-            _products.Remove(productToRemove);
+            throw new NotImplementedException();
         }
 
         // Get all products ordered by price (lowest on top)
         public List<Product> GetAll()
         {
-            return _products.OrderBy(p => p.Price).ToList();
+            throw new NotImplementedException();
         }
 
         // Find a product by name. Results should be ordered by name)
         public List<Product> SearchByName(string nameCriteria)
         {
-            return _products.Where(product => product.Name.Contains(nameCriteria)).ToList();
+            throw new NotImplementedException();
         }
 
         // Find a product between a range or prices. Results should be ordered by price
         public List<Product> SearchByPrice(double minPrice, double maxPrice)
         {
-            return _products.Where(product => product.Price >= minPrice && product.Price <= maxPrice).ToList();
+            throw new NotImplementedException();
         }
 
         // Return a product with a given ID. Return null if not found.
         public Product GetById(int id)
         {
-            return _products.FirstOrDefault(product => product.Id == id);
+            throw new NotImplementedException();
         }
 
         // Return the cheapest product or null if there are no products
         public Product GetCheapest()
         {
-            double price = _products.Min(Product => Product.Price);
-            return _products.First(product => product.Price == price);
+            throw new NotImplementedException();
         }
 
         // Return the most expensive product or null if there are no products
         public Product GetMostExpensive()
         {
-            double price = _products.Max(Product => Product.Price);
-            return _products.First(product => product.Price == price);
+            throw new NotImplementedException();
         }
 
         // Return all the product names in alphabetical ordere
         public List<string> GetProductNames()
         {
-            return _products.OrderBy(p => p.Name).Select(product => product.Name).ToList();
+            throw new NotImplementedException();
         }
 
         // Property to represent the total of all the products' prices.
@@ -78,7 +75,7 @@ namespace Vending
         {
             get
             {
-                return _products.Sum(p => p.Price);
+                throw new NotImplementedException();
             }
         }
     }

@@ -104,7 +104,9 @@ namespace Vending
                     case 9:
                         Console.WriteLine($"Total Value: {machine.TotalValue}");
                         break;
-                    case 0: return;
+                    case 0: 
+                        Console.WriteLine("Goodbye");
+                        return;
                     default:
                         throw new Exception("Something went wrong...invalid selection");
                 }
