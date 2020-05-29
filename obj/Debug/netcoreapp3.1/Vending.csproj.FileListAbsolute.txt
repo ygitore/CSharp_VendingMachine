@@ -1,0 +1,13 @@
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.csprojAssemblyReference.cache
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.AssemblyInfoInputs.cache
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.AssemblyInfo.cs
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.csproj.CoreCompileInputs.cache
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending.deps.json
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending.runtimeconfig.json
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending.runtimeconfig.dev.json
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending.dll
+/home/tgwtg/programming/nss/backend/Vending/bin/Debug/netcoreapp3.1/Vending.pdb
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.dll
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.pdb
+/home/tgwtg/programming/nss/backend/Vending/obj/Debug/netcoreapp3.1/Vending.genruntimeconfig.cache
