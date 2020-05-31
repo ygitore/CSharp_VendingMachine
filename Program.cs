@@ -14,7 +14,6 @@ namespace Vending
             while (true)
             {
                 Console.WriteLine();
-
                 int selection = Menu();
                 switch (selection)
                 {

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Vending
 {
@@ -19,55 +20,71 @@ namespace Vending
         // Add a new product to the Vending Machine (For stocking machine)
         public void AddProduct(Product newProduct)
         {
-            throw new NotImplementedException();
+            _products.Add(newProduct);
         }
 
         // Remove a product from the Vending Machine (for purchasing a product)
         public void RemoveProduct(Product productToRemove)
         {
-            throw new NotImplementedException();
+            _products.Remove(productToRemove);
         }
 
         // Get all products ordered by price (lowest on top)
         public List<Product> GetAll()
         {
-            throw new NotImplementedException();
+            IEnumerable<Product> product = _products.OrderBy(prod => prod.Price);
+            return product.ToList();
         }
 
         // Find a product by name. Results should be ordered by name)
         public List<Product> SearchByName(string nameCriteria)
         {
-            throw new NotImplementedException();
-        }
+            List<Product> productName = _products.Where(n => n.Name == nameCriteria).ToList();
+            var name = productName.OrderBy(n => n.Name);
+            return name.ToList();
+        }                                                                                
 
         // Find a product between a range or prices. Results should be ordered by price
         public List<Product> SearchByPrice(double minPrice, double maxPrice)
         {
-            throw new NotImplementedException();
+            IEnumerable<Product> prodPrice = from prod in _products
+                                             where prod.Price > 2000 && prod.Price < 9000
+                                             orderby prod.Price
+                                             select prod;
+            return prodPrice.ToList();
         }
 
         // Return a product with a given ID. Return null if not found.
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+                Product productById = _products.Find(prodId => prodId.Id == id);
+                return productById;
+            
         }
 
         // Return the cheapest product or null if there are no products
         public Product GetCheapest()
         {
-            throw new NotImplementedException();
+            double minPrice = _products.Min(cheapestProd => cheapestProd.Price);
+            Product cheapestProduct = _products.Find(cheapestProd => cheapestProd.Price == minPrice);
+            return cheapestProduct;
         }
 
         // Return the most expensive product or null if there are no products
         public Product GetMostExpensive()
         {
-            throw new NotImplementedException();
+             double minPrice = _products.Max(expensiveProd => expensiveProd.Price);
+            Product expensiveProduct = _products.Find(expensiveProd => expensiveProd.Price == minPrice);
+            return expensiveProduct;
         }
 
         // Return all the product names in alphabetical ordere
         public List<string> GetProductNames()
         {
-            throw new NotImplementedException();
+            IEnumerable<string> productName = from product in _products
+                                              orderby product.Name ascending
+                                              select product.Name;
+            return productName.ToList();
         }
 
         // Property to represent the total of all the products' prices.
@@ -75,7 +92,7 @@ namespace Vending
         {
             get
             {
-                throw new NotImplementedException();
+                return _products.Sum(prodPrice => prodPrice.Price);
             }
         }
     }
